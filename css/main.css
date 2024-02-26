@@ -1,0 +1,204 @@
+*{
+	box-sizing:border-box;	
+}
+
+body {
+	font-family:Helvetica, Arial, sans-serif;
+	background-color:#f4f4f4;
+
+}
+
+/* Hi I am a comment */
+
+
+h1, h2, h3, h4, h5, p, a{
+	margin-top:0;
+}
+
+h1{
+	margin-top:0;
+	font-size: 3rem;
+}
+
+h2, h3 {
+	font-weight:bold;
+	color:black;
+	margin-bottom:1.5rem;
+
+}
+
+h2{
+	font-size:2rem;
+}
+
+a{
+	color:black;
+	font-weight:bold;
+	text-decoration-thickness:0.25rem;
+	text-decoration-color:red;
+}
+
+a:hover{
+	text-decoration-color:blue;
+}
+
+p, ul, ol{
+	font-size:1rem;
+	
+}
+
+p{
+	width:clamp(40%, 75ch, 100%);
+}
+img{
+	height:auto;
+	max-width:100%;
+}
+
+figure{
+	margin:0;
+}
+
+[id]{
+	scroll-margin-top:3ex;
+}
+
+
+/* ------ Main Content -------*/
+
+main {
+	padding:1rem;
+	margin:0 auto;
+	display:grid;
+	grid-template-columns:repeat(4, 1fr);
+	grid-template-rows:repeat(3, auto);
+	grid-gap:1em;
+}
+
+main section{
+	background-color:white;
+	padding:1rem;
+	border-radius:1rem;
+	box-shadow:-0.25rem 0.25rem 0.5rem rgba(150,150,150,0.5)
+}
+
+.parralax-container{
+	min-height:40vh;
+	background-image:url(../img/ponti-BG.png);
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+}
+
+
+/* --------- Grid Content ----------- */
+
+.full-columns{
+	grid-column:1/5;
+}
+
+.half-columns{
+	grid-column: auto / span 2;
+}
+
+
+
+/* -----------  Hero Styles ------------ */
+
+section.hero {
+	margin-bottom:1rem;
+	max-height:80vh;
+	height:80vh;
+	/* background-image:url("../img/molteni-hero-1200.jpg");
+	background-repeat:no-repeat;
+	background-size:cover; */
+	position:relative;
+}
+
+.hero-text{
+	color:white;
+	background-color:rgba(30, 30, 30, 0.5);
+	width:60%;
+	max-width:100rem;
+	padding:.5rem;
+	margin-left:2rem;
+	position:absolute;
+	bottom:2rem;
+}
+
+.hero-text h2{
+	color:white;
+}
+
+.cta-main {
+	display:inline-block;
+	padding:.5rem;
+	color:white;
+	text-decoration:none;
+	background:linear-gradient(60deg, #d42c06, #7d7978);
+}
+
+
+/* --------------- Header and Nav Styles -------- */
+
+
+
+.logo {
+	max-width:4rem;
+	margin: 0.5rem 2rem;
+}
+
+nav {
+	display:flex;
+	width:100%;
+	align-items:center;
+
+	position:sticky;
+	top:0;
+	z-index:50;
+}
+
+nav a{
+	display:inline-block;
+	color:white;
+	background-color:rgb(200,50,50);
+	font-size:1.25rem;
+	text-decoration:none;
+	padding: 0.5em 0.45em;
+	margin:0;
+	flex:1 1 auto;
+
+	/* transition: background-color .5s ease-in, color .5s ease-out .5s; */
+	transition: all .5s ease-in;
+}
+
+nav a:hover{
+	color:rgb(0,0,0);
+	background-color:rgb(150,150,150);
+	transform: scale(1.2);
+}
+
+
+/* ------------ Footer Style --------------- */
+
+footer{
+	width:100vw;
+	padding:2rem;
+	color:white;
+	background-color:rgb(200,50,50);
+}
+
+
+@media (max-width:49em){
+	.half-columns{
+		grid-column: auto / span 4;
+	}
+}
+
+@media (max-width:500px){
+
+	.hero-text{
+		width:auto;
+		margin-left:0;
+	}
+}
